@@ -10,7 +10,9 @@ public class question2 {
         int[] count = {10, 20, 30, 40, 50, 25, 70, 80, 90, 100};
         
         String[] detail = {"DETAIL1", "Detail2", "Detail3", "DETAIL1", "DETAIL1", "Compatibility - ios and Android | Water Resistance | Battery Life - 2days | GPS, fitness tracking, sleep monitoring, step counting, and more", "DETAIL1", "DETAIL1", "DETAIL1", "DETAIL1"};
-
+        int pos;
+        int opp;
+        int num;
 
         while(mainMenu == 'Y' || mainMenu == 'y'){
             System.out.println
@@ -37,7 +39,33 @@ public class question2 {
                 break;
 
                 case 5: 
+                System.out.print("Enter the Product ID: ");
+                pos = sc.nextInt();
+                System.out.println("\nAdd inventory\nSubtract inventory\n\nPlease choose an option from the above menu: ");
+                opp = sc.nextInt();
+                System.out.println("Current available inventory is ");
+                System.out.println(count[pos-101] );
+                if (opp == 1){
+                    System.out.println("Please enter the count to be added: ");
+                    num = sc.nextInt();
+                    count[pos-101]+= num;
+                    
+                }
+                if (opp == 2){
+                    System.out.println("Please enter the count to be subtracted: ");
+                    num = sc.nextInt();
+                    count[pos-101]-= num;
+                    
+                }
                 
+                System.out.println("\n-----------------------------------------------------------------------------------------------------\n");
+        
+         System.out.println(invo[pos-101]);
+         System.out.print("\nTotal available count: ");
+         System.out.println(count[pos-101]);
+         System.out.println("\n-----------------------------------------------------------------------------------------------------\n");
+
+
                 break;
 
                 case 6:
