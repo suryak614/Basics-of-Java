@@ -9,6 +9,9 @@ public class question2 {
         
         int[] count = {10, 20, 30, 40, 50, 25, 70, 80, 90, 100};
         
+        String[] detail = {"DETAIL1", "Detail2", "Detail3", "DETAIL1", "DETAIL1", "Compatibility - ios and Android | Water Resistance | Battery Life - 2days | GPS, fitness tracking, sleep monitoring, step counting, and more", "DETAIL1", "DETAIL1", "DETAIL1", "DETAIL1"};
+
+
         while(mainMenu == 'Y' || mainMenu == 'y'){
             System.out.println
         ("-----------------------------------------------------------------------------------------------------\n Welcome to the SmartPoint Electronics Store\n-----------------------------------------------------------------------------------------------------");
@@ -27,6 +30,7 @@ public class question2 {
                 break;
 
                 case 3:
+                option3(invo, count, detail);
                 break;
 
                 case 4:
@@ -37,7 +41,7 @@ public class question2 {
                 break;
 
                 case 6:
-                exit1 ();
+                
                 break;
 
 
@@ -54,7 +58,7 @@ public class question2 {
     }
 
     public static void exit1 (){
-        System.out.println("Thank you for visiting SmartPoint!\n\n");
+        System.out.println("Thank you for visiting SmartPoint!\n");
     }
 
     public static void option1 (String[] invo1){
@@ -76,6 +80,22 @@ public class question2 {
          System.out.println(invo1[id-101]);
          System.out.print("\nTotal available count: ");
          System.out.println(item[id-101]);
+         
+    }
+
+    public static void option3 (String[] invo1, int[] item, String[] invo2){
+        // System.out.print{"Enter the Product ID: "};
+        Scanner sc = new Scanner(System.in);
+        int id;
+        System.out.print("Enter the Product ID: ");
+        id = sc.nextInt();
+        System.out.println("\n-----------------------------------------------------------------------------------------------------\n");
+        
+         System.out.println(invo1[id-101]);
+         System.out.print("\nTotal available count: ");
+         System.out.println(item[id-101]);
+         System.out.println();
+         System.out.println(invo2[id-101]);
          
     }
 
