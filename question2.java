@@ -7,14 +7,14 @@ public class question2 {
         String[] menu = {"\nView the complete list of our products", "Check the available count for a specific product", "View the specifications and details of a specific product", "Modify the details of a specific product", "Update the inventory for a specific product", "Exit"};
         String[] invo = {"       101         Mobile", "       102          Laptop", "       103          Tablet", "       104          Portable HDD", "       105          Bluetooth Headphone", "       106         Smart-watch", "       107         Digital Camera","       108         Portable Power bank", "       109            Printer", "       110           Wireless Router"};
         
-           
+        int[] count = {10, 20, 30, 40, 50, 25, 70, 80, 90, 100};
         
         while(mainMenu == 'Y' || mainMenu == 'y'){
             System.out.println
         ("-----------------------------------------------------------------------------------------------------\n Welcome to the SmartPoint Electronics Store\n-----------------------------------------------------------------------------------------------------");
             for (String i: menu)
                 System.out.println(i);
-            System.out.println("\n\nPlease choose an option from the above menu: ");     
+            System.out.print("\n\nPlease choose an option from the above menu: ");     
             select = sc.nextInt();
             
             switch (select) {
@@ -23,6 +23,7 @@ public class question2 {
                 break;
 
                 case 2:
+                option2(invo, count);
                 break;
 
                 case 3:
@@ -62,6 +63,20 @@ public class question2 {
         System.out.println("Product ID   Product Name\n");
         for (String i: invo1)
                 System.out.println(i);
+    }
+
+    public static void option2 (String[] invo1, int[] item){
+        // System.out.print{"Enter the Product ID: "};
+        Scanner sc = new Scanner(System.in);
+        int id;
+        System.out.print("Enter the Product ID: ");
+        id = sc.nextInt();
+        System.out.println("\n-----------------------------------------------------------------------------------------------------\n");
+        
+         System.out.println(invo1[id-101]);
+         System.out.print("\nTotal available count: ");
+         System.out.println(item[id-101]);
+         
     }
 
             
