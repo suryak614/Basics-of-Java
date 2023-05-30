@@ -7,12 +7,11 @@ public class question2 {
         String[] menu = {"\nView the complete list of our products", "Check the available count for a specific product", "View the specifications and details of a specific product", "Modify the details of a specific product", "Update the inventory for a specific product", "Exit"};
         String[] invo = {"       101         Mobile", "       102          Laptop", "       103          Tablet", "       104          Portable HDD", "       105          Bluetooth Headphone", "       106         Smart-watch", "       107         Digital Camera","       108         Portable Power bank", "       109            Printer", "       110           Wireless Router"};
         
-        System.out.println
-        ("-----------------------------------------------------------------------------------------------------\n Welcome to the SmartPoint Electronics Store\n-----------------------------------------------------------------------------------------------------");
-            
+           
         
         while(mainMenu == 'Y' || mainMenu == 'y'){
-            
+            System.out.println
+        ("-----------------------------------------------------------------------------------------------------\n Welcome to the SmartPoint Electronics Store\n-----------------------------------------------------------------------------------------------------");
             for (String i: menu)
                 System.out.println(i);
             System.out.println("\n\nPlease choose an option from the above menu: ");     
@@ -67,5 +66,4 @@ public class question2 {
 
             
     }
-
 
